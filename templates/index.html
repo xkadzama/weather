@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+	<div class="backg">
+		<div class="wrap">
+			<div class='w_main'>
+				<div class='w_1'>
+					<div class="partly_cloudy">{{description}}</div>
+					<img src='static\{{weather_pic}}.png'>
+				</div>
+				<div class='w_2'>
+				<div class='w_2_left'>
+					<div class='city'> {{city}} </div>
+					<div class='date'>{{timestamp}}</div>
+				</div>
+					<div class='w_2_right'>
+						<div class='temp'> {{temp}}°C</div>
+					</div>
+				</div>
+			</div>
+			<form action="{{ url_for ('main_page') }}" method="POST">
+				<div class='pole'>
+					<input type="text" name='r_city' class='pole' placeholder="CITY">
+
+				</div>
+				<div class='knopka'>
+					<input type="submit" name='knopka' class='knopka' >
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
