@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from weather import local_request
 from datetime import datetime
-
+print('Xoce')
 
 app = Flask(__name__)
 
